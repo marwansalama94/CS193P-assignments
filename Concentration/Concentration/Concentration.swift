@@ -9,8 +9,8 @@
 import Foundation
 
 struct Concentration{
-    var cards = [Card]()
-    var flipsCount = 0
+    private(set) var cards = [Card]()
+    private(set) var flipsCount = 0
     var facedUpAndOnlyCard : Int?{
         get {
             return cards.indices.filter { cards[$0].isFacedUp }.oneAndOnly
@@ -22,11 +22,20 @@ struct Concentration{
         }
     }
     
-    func chooseCard(at index: Int){
-        if let indexOfCard = facedUpAndOnlyCard{
-            //in the case of a second card was selected check if they match
-        }else{
-            //either two cards are faced up or none
+    mutating func chooseCard(at index: Int){
+        if !cards[index].isMatched && !cards[index].isFacedUp {
+            if let indexOfChosenCard = facedUpAndOnlyCard , indexOfChosenCard != index {
+                //in the case of a second card was selected check if they match
+                if cards[indexOfChosenCard].identifier == cards[index].identifier{
+                    cards[indexOfChosenCard].isMatched = true
+                    cards[index].isMatched = true
+                }
+                cards[index].isFacedUp = true
+            }else{
+                //either two cards were faced up or none
+                facedUpAndOnlyCard = index
+            }
+            flipsCount += 1
         }
     }
     
