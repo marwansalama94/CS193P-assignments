@@ -14,6 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var flipsCount: UILabel!
     
     @IBAction func touchCard(_ sender: UIButton) {
+        if let cardIndex = cardButtons.firstIndex(of: sender){
+            game.chooseCard(at: cardIndex)
+            updateViewFromModel()
+        }else{
+            print("Selected card is not an element of cardButtons array")
+        }
+    }
+    func updateViewFromModel(){
         
     }
 }
