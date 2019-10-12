@@ -9,15 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var cards: [UIButton]!
+    lazy var game = Concentration(numberOfPairsOfCards: cardButtons.count/2)
+    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet weak var flipsCount: UILabel!
     
     @IBAction func touchCard(_ sender: UIButton) {
-        if let index = cards.firstIndex(of: sender){
-            print("Index \(index)")
-        }else{
-            print("not found in the collection")
-        }
+        
     }
 }
 
