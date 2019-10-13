@@ -39,13 +39,23 @@ struct Concentration{
         }
     }
     
+    private mutating func shuffleCards(){
+        for _ in 0...1000{
+            let firstCardIndex = Int(arc4random_uniform(UInt32(cards.count-1)))
+            let secondCardIndex = Int(arc4random_uniform(UInt32(cards.count-1)))
+            let firstCardCopy = cards[firstCardIndex]
+            cards[firstCardIndex] = cards[secondCardIndex]
+            cards[secondCardIndex] = firstCardCopy
+        }
+    }
+    
     init(numberOfPairsOfCards: Int){
         for _ in 0..<numberOfPairsOfCards{
             let card = Card(identifier: Card.generateUniqueIdentifier())
             cards.append(card)
             cards.append(card)
         }
-        //TODO: shuffle the cards
+        shuffleCards()
     }
     
 }
