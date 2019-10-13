@@ -9,9 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+         pickRandomTheme()
+    }
+    
     lazy var game = Concentration(numberOfPairsOfCards: cardButtons.count/2)
     @IBOutlet var cardButtons: [UIButton]!
     @IBOutlet weak var flipsCount: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBAction func newGamePressed(_ sender: UIButton) {
+        game.instaniateNewGame()
+        startNewGame()
+    }
     
     @IBAction func touchCard(_ sender: UIButton) {
         if let cardIndex = cardButtons.firstIndex(of: sender){
@@ -22,13 +34,33 @@ class ViewController: UIViewController {
         }
     }
     
-    var emojiChoices = ["🐝", "🐛", "🐌", "🐞", "🐜", "🐢", "🐍", "🦎", "🐙", "🦑", "🦞", "🐠"]
+    var emojiChoices = [["🐝", "🐛", "🐌", "🐞", "🐜", "🐢", "🐍", "🦎", "🐙", "🦑", "🦞", "🐠"],
+                        ["🍋", "🍌", "🥥", "🌽", "🥬", "🍎", "🍒", "🍉", "🌶", "🍑","🥦", "🍆"],
+                        ["😀", "😱", "🤡", "😤", "😈", "🤖", "🎃", "👾", "👻", "😻", "🥶", "😡"]
+                        ]
+    
+    func startNewGame(){
+        for button in cardButtons{
+            button.backgroundColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+            button.setTitle("", for: UIControl.State.normal)
+        }
+        flipsCount.text = "Flips:\(game.flipsCount)"
+        scoreLabel.text = "Score:\(game.score)"
+        pickRandomTheme()
+    }
+    
+    var chosenTheme = [String]()
     var emoji = [Int: String]()
     
+    func pickRandomTheme(){
+        let randomIndex = emojiChoices.count.arc4random
+        chosenTheme = emojiChoices[randomIndex]
+    }
+    
     func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-            let randomIndex = (emojiChoices.count).arc4random
-            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+        if emoji[card.identifier] == nil, chosenTheme.count > 0 {
+            let randomIndex = (chosenTheme.count).arc4random
+            emoji[card.identifier] = chosenTheme.remove(at: randomIndex)
         }
         return emoji[card.identifier] ?? "?"
     }
@@ -46,6 +78,7 @@ class ViewController: UIViewController {
             }
         }
         flipsCount.text = "Flips:\(game.flipsCount)"
+        scoreLabel.text = "Score:\(game.score)"
     }
 }
 

@@ -11,6 +11,8 @@ import Foundation
 struct Concentration{
     private(set) var cards = [Card]()
     private(set) var flipsCount = 0
+    private(set) var score = 0 //TODO : add the logic for calculating the score
+    
     var facedUpAndOnlyCard : Int?{
         get {
             return cards.indices.filter { cards[$0].isFacedUp }.oneAndOnly
@@ -22,6 +24,11 @@ struct Concentration{
         }
     }
     
+    mutating func instaniateNewGame(){
+        createNewDeckOfCards(with: cards.count/2)
+        shuffleCards()
+    }
+    
     mutating func chooseCard(at index: Int){
         if !cards[index].isMatched && !cards[index].isFacedUp {
             if let indexOfChosenCard = facedUpAndOnlyCard , indexOfChosenCard != index {
@@ -30,6 +37,8 @@ struct Concentration{
                     cards[indexOfChosenCard].isMatched = true
                     cards[index].isMatched = true
                 }
+                
+                cards[index].previouslySeen = true
                 cards[index].isFacedUp = true
             }else{
                 //either two cards were faced up or none
@@ -49,12 +58,17 @@ struct Concentration{
         }
     }
     
-    init(numberOfPairsOfCards: Int){
+    private mutating func createNewDeckOfCards(with numberOfPairsOfCards: Int){
+        cards.removeAll()
         for _ in 0..<numberOfPairsOfCards{
             let card = Card(identifier: Card.generateUniqueIdentifier())
             cards.append(card)
             cards.append(card)
         }
+    }
+    
+    init(numberOfPairsOfCards: Int){
+        createNewDeckOfCards(with: numberOfPairsOfCards)
         shuffleCards()
     }
     
