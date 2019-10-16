@@ -38,7 +38,6 @@ struct Concentration{
                     cards[index].isMatched = true
                 }
                 
-                cards[index].previouslySeen = true
                 cards[index].isFacedUp = true
             }else{
                 //either two cards were faced up or none
