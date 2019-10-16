@@ -56,15 +56,23 @@
 		E6981B112357B9A500BA0044 /* Set HW2 */ = {
 			isa = PBXGroup;
 			children = (
-				E6981B122357B9A500BA0044 /* AppDelegate.swift */,
-				E6981B142357B9A500BA0044 /* SceneDelegate.swift */,
 				E6981B162357B9A500BA0044 /* ViewController.swift */,
 				E6981B182357B9A500BA0044 /* Main.storyboard */,
-				E6981B1B2357B9A700BA0044 /* Assets.xcassets */,
-				E6981B1D2357B9A700BA0044 /* LaunchScreen.storyboard */,
+				E6981B262357B9C400BA0044 /* Supporting Files */,
 				E6981B202357B9A700BA0044 /* Info.plist */,
 			);
 			path = "Set HW2";
+			sourceTree = "<group>";
+		};
+		E6981B262357B9C400BA0044 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6981B122357B9A500BA0044 /* AppDelegate.swift */,
+				E6981B142357B9A500BA0044 /* SceneDelegate.swift */,
+				E6981B1B2357B9A700BA0044 /* Assets.xcassets */,
+				E6981B1D2357B9A700BA0044 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
