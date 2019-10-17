@@ -26,7 +26,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
-                                                <state key="normal">
+                                                <state key="normal" title="■■■">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
                                             </button>

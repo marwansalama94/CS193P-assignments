@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var game = setGame()
 
     override func viewDidLoad() {
         super.viewDidLoad()
