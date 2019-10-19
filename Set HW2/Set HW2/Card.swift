@@ -9,27 +9,35 @@
 import Foundation
 
 struct Card: CustomStringConvertible{
-    var pipsCount:Int
-    var color : Color
-    var suit : Suit
-    var shape : Shape
-    var description: String {return "\(shape),\(suit),\(color),pips:\(pipsCount)"}
+    let pipsCount:Int
+    let color : Color
+    let shade : Shade
+    let shape : Shape
     
-    enum Color: String,CustomStringConvertible{
+    var description: String {return "\(shape),\(shade),\(color),pips:\(pipsCount)"}
+    
+    
+    enum Color: CustomStringConvertible{
         case red
         case green
         case purple
         
         static var all = [Color.red, Color.green, Color.purple]
-        var description: String { return rawValue}
+        var description: String {
+            switch self{
+            case .red: return "red"
+            case .green: return "green"
+            case .purple: return "purple"
+            }
+        }
     }
     
-    enum Suit: CustomStringConvertible {
+    enum Shade: CustomStringConvertible {
         case stroke
         case fill
         case empty
         
-        static var all = [Suit.stroke, Suit.fill, Suit.empty]
+        static var all = [Shade.stroke, Shade.fill, Shade.empty]
         
         var description: String{
             switch self{
@@ -55,5 +63,16 @@ struct Card: CustomStringConvertible{
         }
     }
     
+    
+}
+
+extension Card: Equatable{
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return
+            lhs.pipsCount == rhs.pipsCount  &&
+            lhs.shape == rhs.shape &&
+            lhs.shade == rhs.shade  &&
+            lhs.color == rhs.color
+    }
     
 }

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Set View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set_HW2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SetViewController" customModule="Set_HW2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,24 +26,36 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
-                                                <state key="normal" title="■■■">
+                                                <state key="normal">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAQ-h9-CXz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8l-9g-wjH">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HA-JC-bBO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNt-8s-dcH">
                                                 <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1G-1Q-Ym8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0I-PJ-VxB">
                                                 <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zx7-Qv-euf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -54,21 +66,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XlK-hC-6Ce"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBX-97-dOi">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TtE-zr-JXa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPj-C9-jW0">
                                                 <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tma-tc-n5P"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7y-SE-e1c">
                                                 <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="02t-Vz-VCC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -79,21 +103,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJC-sy-Jgv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lp-Jb-VkA">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTM-1g-IFy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jms-xd-fnS">
                                                 <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oJ-EY-slX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7K-z0-4hD">
                                                 <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKz-Qo-0jq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -104,21 +140,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHz-a9-mcF"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDG-B5-VbY">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lO1-EJ-gAg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-JZ-Jyg">
                                                 <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTf-py-hwU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vb5-2d-cDc">
                                                 <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7B-XR-JjG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -129,21 +177,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdh-Rs-rJo"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-2e-CCc">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBg-pA-X8J"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swq-0d-FRD">
                                                 <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5p-d5-caR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofu-uo-bhc">
                                                 <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="106"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eex-OQ-Pzr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -154,21 +214,33 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wha-oI-FaE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV6-AC-zav">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROI-fy-cxE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2i-Vf-CT7">
                                                 <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PN-o6-wjL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ9-Jy-2AM">
                                                 <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="105.66666666666667"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZvT-DM-TWI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -200,6 +272,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outletCollection property="cardButtons" destination="hqO-RN-orY" collectionClass="NSMutableArray" id="agD-wv-1ql"/>
+                        <outletCollection property="cardButtons" destination="W8l-9g-wjH" collectionClass="NSMutableArray" id="FVM-Rt-dgd"/>
+                        <outletCollection property="cardButtons" destination="VNt-8s-dcH" collectionClass="NSMutableArray" id="fh5-xn-Qxq"/>
+                        <outletCollection property="cardButtons" destination="i0I-PJ-VxB" collectionClass="NSMutableArray" id="eq7-kd-d8G"/>
+                        <outletCollection property="cardButtons" destination="d2G-Ri-TVN" collectionClass="NSMutableArray" id="5H9-fw-C8h"/>
+                        <outletCollection property="cardButtons" destination="wBX-97-dOi" collectionClass="NSMutableArray" id="8BN-Ke-X1S"/>
+                        <outletCollection property="cardButtons" destination="MPj-C9-jW0" collectionClass="NSMutableArray" id="0v5-XD-hs4"/>
+                        <outletCollection property="cardButtons" destination="Y7y-SE-e1c" collectionClass="NSMutableArray" id="FNm-wo-ROb"/>
+                        <outletCollection property="cardButtons" destination="J7B-Pi-tPn" collectionClass="NSMutableArray" id="Dm7-dz-Jpx"/>
+                        <outletCollection property="cardButtons" destination="9Lp-Jb-VkA" collectionClass="NSMutableArray" id="cYi-dm-HVi"/>
+                        <outletCollection property="cardButtons" destination="jms-xd-fnS" collectionClass="NSMutableArray" id="ach-El-T6V"/>
+                        <outletCollection property="cardButtons" destination="Z7K-z0-4hD" collectionClass="NSMutableArray" id="GcB-eE-dI2"/>
+                        <outletCollection property="cardButtons" destination="LgB-PY-JBX" collectionClass="NSMutableArray" id="AvU-zl-bd8"/>
+                        <outletCollection property="cardButtons" destination="DDG-B5-VbY" collectionClass="NSMutableArray" id="1q3-rI-NId"/>
+                        <outletCollection property="cardButtons" destination="yC4-JZ-Jyg" collectionClass="NSMutableArray" id="13Y-dH-0iO"/>
+                        <outletCollection property="cardButtons" destination="vb5-2d-cDc" collectionClass="NSMutableArray" id="WHy-bX-wTU"/>
+                        <outletCollection property="cardButtons" destination="b0D-5Q-OPm" collectionClass="NSMutableArray" id="Awk-vt-ZaQ"/>
+                        <outletCollection property="cardButtons" destination="ode-2e-CCc" collectionClass="NSMutableArray" id="jcN-9m-dM5"/>
+                        <outletCollection property="cardButtons" destination="swq-0d-FRD" collectionClass="NSMutableArray" id="oIT-OV-CoL"/>
+                        <outletCollection property="cardButtons" destination="Ofu-uo-bhc" collectionClass="NSMutableArray" id="ZXL-tl-I6g"/>
+                        <outletCollection property="cardButtons" destination="D6D-6s-Wqc" collectionClass="NSMutableArray" id="qvw-Og-JVw"/>
+                        <outletCollection property="cardButtons" destination="UV6-AC-zav" collectionClass="NSMutableArray" id="q3f-Uo-5wG"/>
+                        <outletCollection property="cardButtons" destination="v2i-Vf-CT7" collectionClass="NSMutableArray" id="sfz-Y4-7Xc"/>
+                        <outletCollection property="cardButtons" destination="AJ9-Jy-2AM" collectionClass="NSMutableArray" id="pTz-Dt-XvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
