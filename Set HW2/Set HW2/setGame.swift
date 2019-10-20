@@ -11,7 +11,7 @@ import Foundation
 struct setGame{
     private var cards = [Card]()
     private(set) var playingCards = [Card]()
-    private var selectedCards = [Card]()
+    private(set) var selectedCards = [Card]()
     
     mutating func CreateDeckOfCards(){
         for pips in 1..<4{
@@ -77,25 +77,25 @@ struct setGame{
     }
     
     mutating func selectCard(at index:Int){
+
         let selectedCard = playingCards[index]
-        if selectedCards.contains(selectedCard){
-            let index = selectedCards.firstIndex(of: selectedCard)!
-            selectedCards.remove(at: index)
-        }else{
-            if selectedCards.count == 3{
-                if PotentialMatch(){
-                    for card in selectedCards{
-                        playingCards.remove(at: playingCards.firstIndex(of: card)!)
-                    }
-                    selectedCards.removeAll()
-                    if !cards.isEmpty{
-                        deal3MoreCards()
-                    }
-                }
-            }else{
-                //just add me to the selectedCards array
+        if selectedCards.count < 3{
+            if !selectedCards.contains(selectedCard){
                 selectedCards.append(selectedCard)
+            }else{
+                selectedCards.remove(at: selectedCards.firstIndex(of: selectedCard)!)
             }
+        }else{
+            if PotentialMatch(){
+                for card in selectedCards{
+                    playingCards.remove(at: playingCards.firstIndex(of: card)!)
+                }
+                if !cards.isEmpty{
+                    deal3MoreCards()
+                }
+            }
+            selectedCards.removeAll()
+            selectedCards.append(selectedCard)
         }
     }
     
