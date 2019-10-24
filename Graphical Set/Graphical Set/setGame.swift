@@ -75,6 +75,9 @@ struct setGame{
             thirdMatchingRule(firstCard: firstCard, secondCard: secondCard, thirdCard: thirdCard)
         
     }
+    mutating func shuffleCards(){
+        playingCards = playingCards.shuffled()
+    }
     
     mutating func selectCard(at index:Int){
 
