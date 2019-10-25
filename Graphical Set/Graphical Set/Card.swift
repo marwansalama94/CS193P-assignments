@@ -9,7 +9,7 @@
 import Foundation
 
 struct Card: CustomStringConvertible{
-    let pipsCount:Int
+    let pipsCount : Int
     let color : Color
     let shade : Shade
     let shape : Shape
