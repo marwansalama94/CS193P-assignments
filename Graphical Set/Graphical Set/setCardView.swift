@@ -10,7 +10,6 @@ import UIKit
 
 @IBDesignable
 class setCardView: UIView {
-
     @IBInspectable
     var shape: Int = 1 { didSet { setNeedsDisplay(); setNeedsLayout() } }
     @IBInspectable
@@ -22,33 +21,55 @@ class setCardView: UIView {
     @IBInspectable
     var isSelected : Bool = false { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
-    private lazy var grid = Grid(layout:Grid.Layout.dimensions(rowCount: pipsCount, columnCount: 1), frame: bounds.insetBy(dx: 10, dy: 10))
+    private var grid = Grid(layout: Grid.Layout.dimensions(rowCount: 1, columnCount: 1))//{didSet {setNeedsDisplay(); setNeedsLayout()}}
     
     private func drawSingleSquare(at location: CGRect){
         let path = UIBezierPath(rect: location)
         color.setFill()
         color.setStroke()
-        path.fill()
-        path.stroke()
+        addShade(toPath: path)
     }
     private func drawSingleTriangle(at location: CGRect){
         let path = UIBezierPath()
         path.move(to: CGPoint(x: location.maxX, y: location.maxY))
         path.addLine(to: CGPoint(x: location.midX, y: location.minY))
         path.addLine(to: CGPoint(x: location.minX, y: location.maxY))
-        path.close()
+        path.addLine(to: CGPoint(x: location.maxX, y: location.maxY))
+        
         color.setFill()
         color.setStroke()
-        path.fill()
-        path.stroke()
+        addShade(toPath: path)
         
     }
+    
+    private func addShade(toPath path : UIBezierPath ){
+        if shade == 2{
+            path.fill()
+        }else if shade == 3 {
+            strokePath(path)
+        }else{
+            path.stroke()
+        }
+    }
+    
     private func drawSingleCircle(at location: CGRect){
         let path = UIBezierPath(ovalIn: location)
         color.setFill()
         color.setStroke()
-        path.fill()
-        path.stroke()
+        addShade(toPath: path)
+    }
+    
+    private func strokePath(_ path : UIBezierPath){
+        if let context = UIGraphicsGetCurrentContext(){
+            context.saveGState()
+            path.addClip()
+            for offset in stride(from: bounds.minY, to: bounds.maxY, by: 10){
+                path.move(to: CGPoint(x: bounds.minX, y: offset))
+                path.addLine(to: CGPoint(x: bounds.maxX, y: offset))
+            }
+            path.stroke()
+            context.restoreGState()
+        }
     }
     
     private func shapeToDrawDecider(at location:CGRect){
@@ -65,14 +86,18 @@ class setCardView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        grid.dimensions = (pipsCount,1)
+        grid.frame = bounds.insetBy(dx: 10, dy: 10)
         for index in 0..<pipsCount{
             if let location = grid[index]{
                 shapeToDrawDecider(at: location.insetBy(dx: 0, dy: 10))
             }
         }
+        layer.borderWidth = 5
         if isSelected{
-            self.layer.borderColor = UIColor.red.cgColor
-            self.layer.borderWidth = 7
+            layer.borderColor = UIColor.blue.cgColor
+        }else{
+            layer.borderColor = nil
         }
     }
 

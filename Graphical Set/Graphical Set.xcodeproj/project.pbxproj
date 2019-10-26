@@ -16,6 +16,7 @@
 		E6819A62235EAAF30081FD57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6819A60235EAAF30081FD57 /* Main.storyboard */; };
 		E6819A64235EAAF50081FD57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6819A63235EAAF50081FD57 /* Assets.xcassets */; };
 		E6819A67235EAAF50081FD57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6819A65235EAAF50081FD57 /* LaunchScreen.storyboard */; };
+		E6AD42A52363F3B800C7E7B8 /* SetCardsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD42A42363F3B800C7E7B8 /* SetCardsContainerView.swift */; };
 		E6D252BC23629CEA00289E77 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D252BB23629CEA00289E77 /* Grid.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		E6819A63235EAAF50081FD57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6819A66235EAAF50081FD57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6819A68235EAAF50081FD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6AD42A42363F3B800C7E7B8 /* SetCardsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardsContainerView.swift; sourceTree = "<group>"; };
 		E6D252BB23629CEA00289E77 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				E6819A5E235EAAF30081FD57 /* ViewController.swift */,
 				E638950223623F1F00D79612 /* setCardView.swift */,
 				E6819A60235EAAF30081FD57 /* Main.storyboard */,
+				E6AD42A42363F3B800C7E7B8 /* SetCardsContainerView.swift */,
 				E63894FB23623A2400D79612 /* Supporting Files */,
 				E6819A63235EAAF50081FD57 /* Assets.xcassets */,
 				E6819A68235EAAF50081FD57 /* Info.plist */,
@@ -163,6 +166,7 @@
 				E63894FF23623C0200D79612 /* Card.swift in Sources */,
 				E63894FE23623C0200D79612 /* setGame.swift in Sources */,
 				E6819A5D235EAAF30081FD57 /* SceneDelegate.swift in Sources */,
+				E6AD42A52363F3B800C7E7B8 /* SetCardsContainerView.swift in Sources */,
 				E6D252BC23629CEA00289E77 /* Grid.swift in Sources */,
 				E638950323623F1F00D79612 /* setCardView.swift in Sources */,
 			);
