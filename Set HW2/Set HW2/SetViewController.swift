@@ -69,7 +69,7 @@ class SetViewController: UIViewController {
             case .fill:
                 return [.foregroundColor : color.withAlphaComponent(CGFloat(1))]
             case .stroke:
-                return [.foregroundColor : color.withAlphaComponent(CGFloat(0.15))]
+                return [.foregroundColor : color.withAlphaComponent(CGFloat(0.25))]
             }
         }
         let attributedString = NSAttributedString(string: text, attributes: attributes)
